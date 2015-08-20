@@ -5,7 +5,6 @@ set expandtab
 set softtabstop=4
 set shiftround
 set autoindent
-
-autocmd BufWritePost *.py call Flake8()
-execute pathogen#infect()
-syntax on
+set backspace=2
+set nocompatible
+set term=builtin_ansi
