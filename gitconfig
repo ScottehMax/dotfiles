@@ -2,7 +2,7 @@
 	name = Scott Maxwell
 	email = wsemax@gmail.com
 [core]
-	excludesfile = /Users/smax/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
