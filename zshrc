@@ -8,6 +8,9 @@ export ZSH=~/.oh-my-zsh
 ZSH_THEME="agnoster"
 DEFAULT_USER="smax"
 
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -50,12 +53,15 @@ DEFAULT_USER="smax"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew sublime sprunge python osx)
+plugins=(git brew sublime sprunge python osx nvm)
 
 # User configuration
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/go/bin:/usr/local/MacGPG2/bin"
 export PATH="/usr/local/scripts:$PATH"
+export PATH="$PATH:/opt/local/bin:/opt/local/sbin"
+export ANDROID_HOME=/usr/local/opt/android-sdk
+
 
 alias cd..='cd ../'                         # Go back 1 directory level (forfast typers)
 alias ..='cd ../'                           # Go back 1 directory level
@@ -99,3 +105,10 @@ alias zshconfig="vi ~/.zshrc"
 alias lst="livestreamer"
 alias myip='curl ip.appspot.com'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+export PATH="/usr/local/sbin:$PATH"
+export DEVKITPRO=/opt/devkitpro
+export DEVKITARM=$DEVKITPRO/devkitARM
+export PATH=$PATH:$DEVKITARM/bin
+
+export NVM_DIR="/Users/smax/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
