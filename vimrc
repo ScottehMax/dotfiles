@@ -1,5 +1,4 @@
-call pathogen#infect()
-call pathogen#runtime_append_all_bundles()
+execute pathogen#infect()
 
 colorscheme solarized
 syntax on
@@ -11,12 +10,15 @@ set expandtab
 set number
 set showcmd
 set cursorline
+set statusline=%f
 
 filetype indent on
 
 set wildmenu
 set lazyredraw
 set showmatch
+
+set laststatus=2  " show status line always
 
 set textwidth=79
 set shiftwidth=4
@@ -26,3 +28,11 @@ set backspace=2
 set nocompatible
 set term=builtin_ansi
 
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
